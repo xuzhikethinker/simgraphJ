@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/grid/views/panels2d
+END
+Abstract2DPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/views/panels2d/Abstract2DPanel.java
+END
+HexaPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/views/panels2d/HexaPanel.java
+END
+TrianglePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/grid/views/panels2d/TrianglePanel.java
+END
+SquarePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/grid/views/panels2d/SquarePanel.java
+END

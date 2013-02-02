@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/projections
+END
+PAttachStohasticGraphProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/PAttachStohasticGraphProjection.java
+END
+NeighborhoodGraphProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/NeighborhoodGraphProjection.java
+END
+Projection.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/Projection.java
+END
+PAttachDetermGraphProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/PAttachDetermGraphProjection.java
+END
+PseudoLatticeProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/PseudoLatticeProjection.java
+END
+Lattice2DProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/projections/Lattice2DProjection.java
+END
+Lattice3DProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/projections/Lattice3DProjection.java
+END
+NetworksProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/projections/NetworksProjection.java
+END
+DecompositionGraphProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/DecompositionGraphProjection.java
+END
+ProjGraphPA.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/ProjGraphPA.java
+END
+TriangulationDelauneyProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/projections/TriangulationDelauneyProjection.java
+END

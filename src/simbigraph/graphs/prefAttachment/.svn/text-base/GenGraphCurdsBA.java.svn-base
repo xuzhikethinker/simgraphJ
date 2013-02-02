@@ -1,0 +1,91 @@
+package simbigraph.graphs.prefAttachment;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+import org.apache.commons.collections15.Factory;
+
+import edu.uci.ics.jung.graph.Graph;
+import edu.uci.ics.jung.graph.UndirectedSparseGraph;
+
+public class GenGraphCurdsBA<V,E> {
+	protected Factory<Graph<V, E>> graphFactory;
+	protected Factory<V> vertexFactory;
+	protected Factory<E> edgeFactory;
+	private Graph<V, E> graph;
+	Random mRand = new Random();
+	int m;
+	public GenGraphCurdsBA(Factory<Graph<V, E>> graphFactory, Factory<V> vertexFactory,
+			Factory<E> edgeFactory, int mass_addEdd) {
+		this.graphFactory = graphFactory;
+		this.vertexFactory = vertexFactory;
+		this.edgeFactory = edgeFactory;
+		this.m=mass_addEdd;
+		mRand = new Random();
+		
+	}
+
+	public Graph<V, E> getBara2(int num) {
+		//List<V> curVertexes = new ArrayList<V>();
+		graph = graphFactory.create();
+		Map<V,Integer> mapVertexDegree = new HashMap<V,Integer>();
+		for (int i = 0; i < num; i++) {
+			V n = vertexFactory.create();
+			graph.addVertex(n);
+			//curVertexes.add(n);
+			//n.setK(getVirtexK(m));
+			mapVertexDegree.put(n, getVirtexK(m));
+		}
+		ex: do {
+			//Ѕеру вершину с максимальной разностью между потенциальной и реальной св€зност€ми
+			V n1 = null;   			 int maxRazn = Integer.MIN_VALUE;
+			for (V vertex : mapVertexDegree.keySet()) {
+				if ((mapVertexDegree.get(vertex)-graph.degree(vertex))>maxRazn) {
+					n1=vertex;
+					maxRazn=mapVertexDegree.get(vertex)-graph.degree(vertex);
+				}
+			}
+			// Ѕеру случайную вершину
+			if(mapVertexDegree.get(n1)-graph.degree(n1)-1<=0)mapVertexDegree.remove(n1);
+			if(mapVertexDegree.size()==0)break ex;
+			
+			V n2;
+			do{
+			Iterator<V> it =mapVertexDegree.keySet().iterator();
+
+			n2 =it.next();
+			for(int i=0; i<mRand.nextInt(mapVertexDegree.keySet().size());i++)
+				n2 =it.next();
+			}while(n1==n2);
+			int seconRazn=mapVertexDegree.get(n2)-graph.degree(n2);
+			graph.addEdge(edgeFactory.create(), n1, n2);
+			
+			if(mapVertexDegree.get(n2)-graph.degree(n2)<=0)mapVertexDegree.remove(n2);
+		} while (mapVertexDegree.size()>0);
+	
+
+		return graph;
+	}
+
+	// -------------------------------------------------------------------------------------------------
+	private static int getVirtexK(int m) {
+		
+		int l = m;
+		int k = m;
+		double rand = Math.random();
+		double tr = 0;
+		while (true) {
+			tr = tr + (2.0 * l * (l + 1)) / (1.0 * k * (k + 1) * (k + 2));
+			if (rand < tr) {
+				break;
+			}
+			k++;
+		}
+		return k;
+	}
+}

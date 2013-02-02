@@ -1,0 +1,208 @@
+/*package simbigraph.grid.views;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import simbigraph.compiling.SimgraphNode;
+import simbigraph.compiling.Simulation;
+import simbigraph.engine.SimState;
+import simbigraph.grid.model.CellAccessor;
+import simbigraph.grid.model.DefaultGrid;
+import simbigraph.grid.model.Grid;
+import simbigraph.grid.model.GridDimensions;
+import simbigraph.grid.model.GridPoint;
+import simbigraph.grid.model.MultiOccupancyCellAccessor;
+import simbigraph.grid.model.SimpleGridAdder;
+import simbigraph.grid.model.WrapAroundBorders;
+import simbigraph.gui.MainFrame;
+import simbigraph.math.RandomHelper;
+
+import edu.uci.ics.jung.graph.util.Pair;
+
+public class SimulationInYan extends Simulation {
+	class In extends SimgraphNode {
+		public Color color = Color.BLUE;
+
+		public Color getColor() {
+			return color;
+		}
+	}
+
+	class Yan extends SimgraphNode {
+		public Color color = Color.GREEN;
+
+		public Color getColor() {
+			return color;
+		}
+	}
+
+	List<In> inSet = new ArrayList();
+	List<Yan> yanSet = new ArrayList();
+	// Grid<SimgraphNode> grid;
+	CellAccessor<SimgraphNode, Map<GridPoint, Object>> accessor = new MultiOccupancyCellAccessor<SimgraphNode>();
+
+	private void doOktadron() {
+
+		GridDimensions dim = MainGrid2D.grid.getDimensions();
+		for (int i = 0; i < dim.getWidth(); i++)
+			for (int j = 0; j < dim.getHeight(); j++) {
+				if ((simbigraph.math.RandomHelper.getUniform().nextDoubleFromTo(
+						0.0d, 1.0d) > 0.6)) {
+					SimgraphNode a = null;
+					if (simbigraph.math.RandomHelper.getUniform().nextDoubleFromTo(
+							0.0d, 1.0d) > 0.5) {
+						a = new In();
+						inSet.add((In) a);
+					} else {
+						a = new Yan();
+						yanSet.add((Yan) a);
+					}
+					MainGrid2D.grid.moveTo(a, i, j);
+				}
+			}
+		return;
+	}
+
+	{
+		doOktadron();
+	}
+
+	// -----------------------------------------------------------------------
+	private int NumYanNeighbors;
+	private int NumInNeighbors;
+	private ArrayList<SimgraphNode> deathList = new ArrayList<SimgraphNode>();
+	private Map<SimgraphNode, GridPoint> birthList = new HashMap<SimgraphNode, GridPoint>();
+
+	public void birthAgent(int i, int j, SimgraphNode newAgent) {
+		birthList.put(newAgent, new GridPoint(i, j));
+	}
+
+	public void dieAgent(SimgraphNode protoAgent) {
+		deathList.add(protoAgent);
+	}
+
+	public int getNumInYanNeighbors(int x, int y) {
+		GridDimensions dims = MainGrid2D.grid.getDimensions();
+		NumYanNeighbors = 0;
+		NumInNeighbors = 0;
+		int ncount = 0;
+		try {
+			for (int j = y - 1; j <= y + 1; j++) {
+				for (int i = x - 1; i <= x + 1; i++) {
+					if (!(j == y && i == x)) {
+						// выше выбираем соседа в торе, а ниже проверяем
+						// является ли он жизнью
+						for (SimgraphNode agent : MainGrid2D.grid.getObjectsAt(i, j)) {
+							if (agent instanceof Yan) {
+								NumYanNeighbors++;
+							}
+							if (agent instanceof In) {
+								NumInNeighbors++;
+							}
+							ncount++;
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.out.println("Error!!!"); 
+		}
+		return ncount;
+	}
+
+	public void step(SimState state) {
+		GridDimensions dim = MainGrid2D.grid.getDimensions();
+		for (int i = 0; i < dim.getDimension(0); i++) {
+			for (int j = 0; j < dim.getDimension(1); j++){
+  				SimgraphNode agent = null;
+				for (SimgraphNode agentt : MainGrid2D.grid.getObjectsAt(i, j))
+					agent = agentt;
+				int numNeighbor = getNumInYanNeighbors(i, j);
+				if (agent == null) {
+					if (numNeighbor != 0) {
+						if (NumYanNeighbors == 2 && NumInNeighbors == 1) {
+							// create In
+							In newAgent = new In();
+							birthAgent(i, j, newAgent);
+						}
+						if (NumYanNeighbors == 1 && NumInNeighbors == 2) {
+							// create Yan
+							Yan newAgent = new Yan();
+							birthAgent(i, j, newAgent);
+						}
+					}
+				} else {
+					if (numNeighbor >= 5 || numNeighbor < 2) {
+						// гибель от перенаселения или одиночества
+						dieAgent(agent);
+					}
+					if (numNeighbor == 4) {
+						// if {
+						if ((agent instanceof Yan) && (NumInNeighbors != 2))
+							dieAgent(agent);
+						if ((agent instanceof In) && (NumYanNeighbors != 2))
+							dieAgent(agent);
+					}
+				}
+			}
+		}
+		// занесли в списки смертников и новорождённых теперь время действовать
+		for (SimgraphNode a : deathList) {
+			GridPoint d = MainGrid2D.grid.getLocation(a);
+			
+			// MainNeiGraph.grid.moveTo(null,d.getX(),d.getY());
+			 
+			  if (d != null) 
+			      accessor.remove(a, MainGrid2D.grid.getLocationStorage(), d);
+				 System.out.println( MainGrid2D.grid.getLocationMap().remove(a));
+
+		}
+
+		Set set = birthList.entrySet();
+		Iterator i = set.iterator();
+		while (i.hasNext()) {
+			Map.Entry me = (Map.Entry) i.next();
+			SimgraphNode a = (SimgraphNode) me.getKey();
+			GridPoint p = (GridPoint) me.getValue();
+			if(a==null)System.out.println("stop");
+			MainGrid2D.grid.moveTo(a, p.getX(), p.getY());
+		}
+		birthList = new HashMap();
+		deathList=new ArrayList();
+
+		System.out.println("iii");
+	}
+
+	public void start() {
+		super.start();
+		schedule.scheduleRepeating(this);
+		final Simulation sim = this;
+		new Thread(new Runnable() {
+			public void run() {
+				long steps = 0;
+				while (steps < Integer.MAX_VALUE) {
+					synchronized (sim) {
+						if (!schedule.step(sim))
+							break;
+						steps = schedule.getSteps();
+					}
+					try {
+						System.out.println("www");
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					MainFrame.selectedSBGNode.update();
+				}
+				finish();
+			}
+		}).start();
+	}
+
+}*/

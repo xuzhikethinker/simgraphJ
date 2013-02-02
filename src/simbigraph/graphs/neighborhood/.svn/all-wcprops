@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood
+END
+PanelGraphView.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/PanelGraphView.java
+END
+MyJPanel2.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/MyJPanel2.java
+END
+SimulationNei.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/SimulationNei.java
+END
+XYLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/XYLayout.java
+END
+LifeModelAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/LifeModelAgent.java
+END
+MainNeiGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/MainNeiGraph.java
+END
+Agent.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/Agent.java
+END
+DumpAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/graphs/neighborhood/DumpAgent.java
+END

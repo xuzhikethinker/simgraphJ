@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/grid/pseudogrid
+END
+SimControlPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/budnik/!svn/ver/20/simbigraph/src/simbigraph/grid/pseudogrid/SimControlPanel.java
+END
+PseudoLatticePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/pseudogrid/PseudoLatticePanel.java
+END
+QuasiGrid.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/pseudogrid/QuasiGrid.java
+END
+AbstractGrid.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/pseudogrid/AbstractGrid.java
+END
+QuasiGridPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/budnik/!svn/ver/18/simbigraph/src/simbigraph/grid/pseudogrid/QuasiGridPoint.java
+END

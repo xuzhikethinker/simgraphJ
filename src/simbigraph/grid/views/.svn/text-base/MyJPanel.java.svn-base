@@ -1,0 +1,41 @@
+/*package simbigraph.grid.views;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+import simbigraph.compiling.SimgraphNode;
+import simbigraph.grid.model.Grid;
+import simbigraph.grid.model.GridDimensions;
+import simbigraph.grid.model.GridPoint;
+
+
+public class MyJPanel extends JPanel {
+@Override
+public void paint(Graphics ge) {
+	// TODO Auto-generated method stub
+	super.paint(ge);
+	Graphics g = ge.create();
+	GridDimensions dim = MainGrid2D.grid.getDimensions();
+	int sizeCell = MainGrid2D.sellSize;
+	//horizontal
+	for(int i=0;i<dim.getHeight()+1;i++){
+		g.drawLine(0, i*sizeCell, sizeCell*dim.getWidth(), i*sizeCell);
+	}
+	//vertical
+	for(int i=0;i<dim.getWidth()+1;i++){
+		g.drawLine( i*sizeCell,0, i*sizeCell, sizeCell*dim.getHeight());
+	}
+	//Отрисовываю агентов
+	for(int i=0;i<dim.getWidth();i++)
+	for(int j=0;j<dim.getHeight();j++)
+	{
+		SimgraphNode a= MainGrid2D.grid.getObjectAt(i,j);
+		if(a!=null){g.setColor(Color.RED);
+		g.fillOval( i*sizeCell, j*sizeCell, sizeCell, sizeCell);}
+	}
+}
+}
+*/

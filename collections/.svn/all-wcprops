@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/budnik/!svn/ver/18/simbigraph/collections
+END
+TreeVisitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/TreeVisitor.java
+END
+prepanel.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/prepanel.txt
+END
+DelegatedIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/DelegatedIterator.java
+END
+FilteredIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/FilteredIterator.java
+END
+ListIndexedIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/ListIndexedIterable.java
+END
+UnremoveableIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/UnremoveableIterator.java
+END
+IndexedIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/IndexedIterable.java
+END
+SimpleWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/SimpleWrapper.java
+END
+Contains.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/Contains.java
+END
+IteratorOverIterables.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/IteratorOverIterables.java
+END
+Tree.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/Tree.java
+END
+CompositeIndexedIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/CompositeIndexedIterable.java
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/Pair.java
+END
+NaryTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/NaryTree.java
+END
+RandomIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/RandomIterable.java
+END
+IterableAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/IterableAdaptor.java
+END
+CollectionUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/CollectionUtils.java
+END
+DelegatedIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/18/simbigraph/collections/DelegatedIterable.java
+END

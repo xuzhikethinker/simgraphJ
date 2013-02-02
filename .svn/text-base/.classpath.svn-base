@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/colt.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/ecj-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/j3dcore.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/j3dutils.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jai_codec.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jai_core.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/javassist-3.7.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/javolution-3.7.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jcommon-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jfreechart-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jfreechart-1.0.3-experimental.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-algorithms-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-api-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-graph-impl-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-io-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-jai-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/jung-visualization-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/simbigraph/simbigraph/lib/vecmath.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle
+END
+GridShape.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/GridShape.java
+END
+GridDecorator.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/GridDecorator.java
+END
+Grid3DProjectionDecorator.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/Grid3DProjectionDecorator.java
+END
+GridProjectionDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/GridProjectionDescriptor.java
+END
+Grid2DProjectionDecorator.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/Grid2DProjectionDecorator.java
+END
+Grid2DLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/Grid2DLayout.java
+END
+Grid3DLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/budnik/!svn/ver/18/simbigraph/samples/triangle/Grid3DLayout.java
+END
